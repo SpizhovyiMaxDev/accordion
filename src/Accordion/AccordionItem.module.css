@@ -1,0 +1,52 @@
+.accordionItem {
+  border-top: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionItem:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.accordionItemHead {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 2.4rem;
+  padding: 2rem 0;
+  cursor: pointer;
+}
+
+.accordionItemTitle,
+.accordionItemNum {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.accordionItemBody {
+  text-align: justify;
+  overflow: hidden;
+  transition: height 0.4s;
+}
+
+.accordionItemBodyContent {
+  padding: 0 2.4rem 2rem calc(2.4rem + 1.8rem);
+}
+
+.accordionItemBodyTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.accordionItemBodyList {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  padding: 0 2rem;
+  margin: 1rem 0 0 2rem;
+  text-align: left;
+}
+
+.accordionItemBodyText {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}

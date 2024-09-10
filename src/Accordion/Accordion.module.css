@@ -1,0 +1,5 @@
+.accordion {
+  padding: 9.8rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+}
