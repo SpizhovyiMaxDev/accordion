@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
-function useAccordionHeightTransition(accordionBodyRef, isOpen) {
+function useAccordionHeightTransition(accordionItemBodyRef, isOpen) {
   useEffect(
     function () {
-      const content = accordionBodyRef.current;
+      const content = accordionItemBodyRef.current;
 
       function transitionHasOccured() {
         content.style.height = "auto";
@@ -26,7 +26,7 @@ function useAccordionHeightTransition(accordionBodyRef, isOpen) {
         content.removeEventListener("transitionend", transitionHasOccured);
       };
     },
-    [isOpen, accordionBodyRef]
+    [isOpen, accordionItemBodyRef]
   );
 
   return null;

@@ -12,10 +12,10 @@ import useAccordionHeightTransition from "./hooks/useAccordionHeightTransition";
 function AccordionItem({ indexItem, title, children }) {
   const { openItem, setOpenItem } = useAccordion();
   const isOpen = indexItem === openItem;
-  const accordionBodyRef = useRef(null);
+  const accordionItemBodyRef = useRef(null);
 
-  useAccordionBodyClassNames(accordionBodyRef, styles);
-  useAccordionHeightTransition(accordionBodyRef, isOpen);
+  useAccordionBodyClassNames(accordionItemBodyRef, styles);
+  useAccordionHeightTransition(accordionItemBodyRef, isOpen);
 
   return (
     <div className={styles.accordionItem}>
@@ -32,7 +32,7 @@ function AccordionItem({ indexItem, title, children }) {
         <AccordionItemIcon isOpen={isOpen} />
       </header>
 
-      <div className={styles.accordionItemBody} ref={accordionBodyRef}>
+      <div className={styles.accordionItemBody} ref={accordionItemBodyRef}>
         <div className={styles.accordionItemBodyContent}>{children}</div>
       </div>
     </div>
