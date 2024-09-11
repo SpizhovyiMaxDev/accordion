@@ -11,11 +11,11 @@ import useAccordionHeightTransition from "./hooks/useAccordionHeightTransition";
 
 function AccordionItem({ indexItem, title, children }) {
   const { openItem, setOpenItem } = useAccordion();
-  const isOpen = indexItem === openItem;
   const accordionItemBodyRef = useRef(null);
+  const isOpen = indexItem === openItem;
 
-  useAccordionBodyClassNames(accordionItemBodyRef, styles);
   useAccordionHeightTransition(accordionItemBodyRef, isOpen);
+  useAccordionBodyClassNames(accordionItemBodyRef, styles);
 
   return (
     <div className={styles.accordionItem}>
@@ -23,11 +23,11 @@ function AccordionItem({ indexItem, title, children }) {
         className={styles.accordionItemHead}
         onClick={() => setOpenItem(isOpen ? null : indexItem)}
       >
-        <span className={styles.accordionItemNum}>
+        <span className={styles.accordionItemHeadNum}>
           {formatTwoDigitNum(indexItem + 1)}
         </span>
 
-        <h4 className={styles.accordionItemTitle}>{title}</h4>
+        <h4 className={styles.accordionItemHeadTitle}>{title}</h4>
 
         <AccordionItemIcon isOpen={isOpen} />
       </header>

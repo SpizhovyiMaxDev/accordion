@@ -17,8 +17,8 @@
   cursor: pointer;
 }
 
-.accordionItemTitle,
-.accordionItemNum {
+.accordionItemHeadTitle,
+.accordionItemHeadNum {
   font-size: 1.8rem;
   font-weight: bold;
 }
