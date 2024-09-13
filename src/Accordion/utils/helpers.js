@@ -1,17 +1,17 @@
-export function formatTwoDigitNum(num) {
+export function formatTwoDigits(num) {
   const isDigit = num < 10;
   return isDigit ? num.toString().padStart(2, 0) : num;
 }
 
-export function isHeadingElement(element) {
+export function isHeadingNode(element) {
   return element instanceof HTMLHeadingElement;
 }
 
-export function isParagrapElement(element) {
+export function isParagraphNode(element) {
   return element instanceof HTMLParagraphElement;
 }
 
-export function isListElement(element) {
+export function isListNode(element) {
   return (
     element instanceof HTMLUListElement || element instanceof HTMLOListElement
   );

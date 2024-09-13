@@ -2,7 +2,7 @@ import styles from "./AccordionItem.module.css";
 
 import { useRef } from "react";
 import { useAccordion } from "./context/AccordionContext";
-import { formatTwoDigitNum } from "./utils/helpers";
+import { formatTwoDigits } from "./utils/helpers";
 
 import AccordionItemIcon from "./AccordionItemIcon";
 
@@ -24,7 +24,7 @@ function AccordionItem({ indexItem, title, children }) {
         onClick={() => setOpenItem(isOpen ? null : indexItem)}
       >
         <span className={styles.accordionItemHeadNum}>
-          {formatTwoDigitNum(indexItem + 1)}
+          {formatTwoDigits(indexItem + 1)}
         </span>
 
         <h4 className={styles.accordionItemHeadTitle}>{title}</h4>

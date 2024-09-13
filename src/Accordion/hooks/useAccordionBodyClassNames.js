@@ -1,10 +1,6 @@
 import { useEffect } from "react";
 
-import {
-  isHeadingElement,
-  isListElement,
-  isParagrapElement,
-} from "../utils/helpers";
+import { isHeadingNode, isListNode, isParagraphNode } from "../utils/helpers";
 
 function useAccordionBodyClassNames(accordionBodyRef, styles) {
   useEffect(
@@ -14,15 +10,15 @@ function useAccordionBodyClassNames(accordionBodyRef, styles) {
       );
 
       accordionItemBodyNodes.forEach((nodeElement) => {
-        if (isHeadingElement(nodeElement)) {
+        if (isHeadingNode(nodeElement)) {
           nodeElement.classList.add(styles.accordionItemBodyTitle);
         }
 
-        if (isListElement(nodeElement)) {
+        if (isListNode(nodeElement)) {
           nodeElement.classList.add(styles.accordionItemBodyList);
         }
 
-        if (isParagrapElement(nodeElement)) {
+        if (isParagraphNode(nodeElement)) {
           nodeElement.classList.add(styles.accordionItemBodyText);
         }
       });
