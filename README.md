@@ -4,4 +4,3 @@
 
 - My primary focus was to make the component both readable and abstract, ensuring that each variable and function has a clear, specific purpose, with names that reveal their intent.
 
-Copyright by Max Spizhovyi
